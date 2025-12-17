@@ -38,7 +38,12 @@ ${formData.get('message') || 'No additional details provided'}
       }
 
       toast.success('Thank you for your interest! Check your email for confirmation. Our team will contact you within 24 hours.')
-      e.currentTarget.reset()
+
+      // Reset form safely
+      const form = e.currentTarget
+      if (form) {
+        form.reset()
+      }
     } catch (error) {
       console.error('Form submission error:', error)
       toast.error('Failed to send your request. Please try again or contact us directly.')
