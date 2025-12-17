@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 interface CardProps {
   icon: string
@@ -8,24 +11,29 @@ interface CardProps {
 }
 
 export default function Card({ icon, title, description, href }: CardProps) {
-  const CardContent = () => (
-    <div className="relative group h-full">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity" />
-      <div className="relative bg-gradient-to-br from-white/5 to-white/2 border border-white/8 rounded-2xl p-8 lg:p-10 h-full hover:border-primary/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 transition-all cursor-pointer">
-        <div className="text-4xl lg:text-5xl mb-5 drop-shadow-lg">{icon}</div>
-        <h3 className="text-xl lg:text-2xl font-bold text-white mb-4">{title}</h3>
-        <p className="text-gray leading-relaxed">{description}</p>
-      </div>
-    </div>
+  const content = (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-50px' }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      whileHover={{
+        scale: 1.05,
+        y: -8,
+        boxShadow: '0 20px 60px rgba(0, 102, 255, 0.3)',
+        transition: { duration: 0.3 }
+      }}
+      className="bg-gradient-to-br from-white/5 to-white/2 border border-white/8 rounded-2xl p-8 hover:border-primary/50 transition-all group"
+    >
+      <div className="text-4xl mb-6 group-hover:scale-110 transition-transform">{icon}</div>
+      <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
+      <p className="text-gray leading-relaxed">{description}</p>
+    </motion.div>
   )
 
   if (href) {
-    return (
-      <Link href={href}>
-        <CardContent />
-      </Link>
-    )
+    return <Link href={href}>{content}</Link>
   }
 
-  return <CardContent />
+  return content
 }

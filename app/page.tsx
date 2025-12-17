@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Hero from '@/components/Hero'
 import SectionHeader from '@/components/SectionHeader'
 import Card from '@/components/Card'
@@ -20,10 +21,22 @@ export default function Home() {
           label="Trusted By"
           title="Insurance Leaders Choose NIZSOFT"
         />
-        <div className="flex justify-around items-center flex-wrap gap-8 lg:gap-12 opacity-50">
-          {['Microsoft Azure', 'AWS', 'Google Cloud', 'Oracle', 'Salesforce'].map((partner, i) => (
-            <div key={i} className="text-xl lg:text-2xl font-bold text-gray hover:text-light hover:opacity-100 hover:scale-110 transition-all">
-              {partner}
+        <div className="flex justify-around items-center flex-wrap gap-8 lg:gap-12 opacity-70 hover:opacity-100 transition-opacity">
+          {[
+            { name: 'ADNIC', logo: '/partners/adnic.png' },
+            { name: 'Cigna', logo: '/partners/cigna.png' },
+            { name: 'Daman', logo: '/partners/daman.png' },
+            { name: 'GIG', logo: '/partners/gig.png' },
+            { name: 'MetLife', logo: '/partners/metlife.png' },
+          ].map((partner, i) => (
+            <div key={i} className="grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
+              <Image
+                src={partner.logo}
+                alt={`${partner.name} Logo`}
+                width={160}
+                height={60}
+                className="h-12 lg:h-14 w-auto object-contain"
+              />
             </div>
           ))}
         </div>
@@ -36,7 +49,7 @@ export default function Home() {
           title="Complete Insurance Operations Suite"
           description="Unified platform architecture built on modern microservices with everything you need"
         />
-        
+
         <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-white/8 rounded-3xl p-8 lg:p-12 my-12">
           <div className="text-center text-xl lg:text-2xl font-bold text-white mb-8">🏗️ NIZSOFT Platform Architecture</div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6">
@@ -123,10 +136,10 @@ export default function Home() {
       {/* Performance Stats */}
       <section className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20">
         <Stats items={[
-          { value: '99.9%', label: 'Platform Uptime' },
-          { value: '<100ms', label: 'API Response Time' },
+          { value: 99.9, label: 'Platform Uptime', isNumeric: true, decimals: 1, suffix: '%' },
+          { value: 100, label: 'API Response Time', isNumeric: true, prefix: '<', suffix: 'ms' },
           { value: '24×7', label: 'Support Available' },
-          { value: 'Zero', label: 'Data Migration Loss' },
+          { value: 0, label: 'Data Migration Loss', isNumeric: true, suffix: '' },
         ]} />
       </section>
     </div>

@@ -1,46 +1,84 @@
 'use client'
 
-import { FormEvent } from 'react'
+import { FormEvent, useState } from 'react'
+import toast from 'react-hot-toast'
 
 export default function ContactForm() {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    alert('Thank you for your interest! Our team will contact you within 24 hours to schedule your personalized demo.')
-    e.currentTarget.reset()
+    setIsSubmitting(true)
+
+    const formData = new FormData(e.currentTarget)
+    const data = {
+      name: `${formData.get('firstName')} ${formData.get('lastName')}`,
+      email: formData.get('email'),
+      company: formData.get('company'),
+      phone: formData.get('phone'),
+      message: `
+Insurance Segment: ${formData.get('segment')}
+Area of Interest: ${formData.get('interest') || 'Not specified'}
+
+${formData.get('message') || 'No additional details provided'}
+      `.trim(),
+    }
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
+
+      toast.success('Thank you for your interest! Check your email for confirmation. Our team will contact you within 24 hours.')
+      e.currentTarget.reset()
+    } catch (error) {
+      console.error('Form submission error:', error)
+      toast.error('Failed to send your request. Please try again or contact us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
     <form onSubmit={handleSubmit} className="max-w-3xl mx-auto p-6 lg:p-12 bg-gradient-to-br from-white/5 to-white/2 border border-white/8 rounded-3xl">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div>
-          <label htmlFor="firstName" className="block mb-3 text-light font-semibold">First Name *</label>
-          <input type="text" id="firstName" required className="w-full px-4 py-3 bg-white/3 border border-white/10 rounded-xl text-light focus:outline-none focus:border-primary focus:bg-white/5 transition-all" />
+          <label htmlFor="firstName" className="block mb-3 text-light font-semibold">First Name <span className="text-red-500">*</span></label>
+          <input type="text" id="firstName" name="firstName" required className="w-full px-4 py-3 bg-white/3 border border-white/10 rounded-xl text-light focus:outline-none focus:border-primary focus:bg-white/5 transition-all" />
         </div>
         <div>
-          <label htmlFor="lastName" className="block mb-3 text-light font-semibold">Last Name *</label>
-          <input type="text" id="lastName" required className="w-full px-4 py-3 bg-white/3 border border-white/10 rounded-xl text-light focus:outline-none focus:border-primary focus:bg-white/5 transition-all" />
+          <label htmlFor="lastName" className="block mb-3 text-light font-semibold">Last Name <span className="text-red-500">*</span></label>
+          <input type="text" id="lastName" name="lastName" required className="w-full px-4 py-3 bg-white/3 border border-white/10 rounded-xl text-light focus:outline-none focus:border-primary focus:bg-white/5 transition-all" />
         </div>
       </div>
-      
+
       <div className="mb-6">
-        <label htmlFor="email" className="block mb-3 text-light font-semibold">Business Email *</label>
-        <input type="email" id="email" required className="w-full px-4 py-3 bg-white/3 border border-white/10 rounded-xl text-light focus:outline-none focus:border-primary focus:bg-white/5 transition-all" />
+        <label htmlFor="email" className="block mb-3 text-light font-semibold">Business Email <span className="text-red-500">*</span></label>
+        <input type="email" id="email" name="email" required className="w-full px-4 py-3 bg-white/3 border border-white/10 rounded-xl text-light focus:outline-none focus:border-primary focus:bg-white/5 transition-all" />
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div>
-          <label htmlFor="company" className="block mb-3 text-light font-semibold">Company Name *</label>
-          <input type="text" id="company" required className="w-full px-4 py-3 bg-white/3 border border-white/10 rounded-xl text-light focus:outline-none focus:border-primary focus:bg-white/5 transition-all" />
+          <label htmlFor="company" className="block mb-3 text-light font-semibold">Company Name <span className="text-red-500">*</span></label>
+          <input type="text" id="company" name="company" required className="w-full px-4 py-3 bg-white/3 border border-white/10 rounded-xl text-light focus:outline-none focus:border-primary focus:bg-white/5 transition-all" />
         </div>
         <div>
-          <label htmlFor="phone" className="block mb-3 text-light font-semibold">Phone Number</label>
-          <input type="tel" id="phone" className="w-full px-4 py-3 bg-white/3 border border-white/10 rounded-xl text-light focus:outline-none focus:border-primary focus:bg-white/5 transition-all" />
+          <label htmlFor="phone" className="block mb-3 text-light font-semibold">Phone Number <span className="text-red-500">*</span></label>
+          <input type="tel" id="phone" name="phone" required className="w-full px-4 py-3 bg-white/3 border border-white/10 rounded-xl text-light focus:outline-none focus:border-primary focus:bg-white/5 transition-all" />
         </div>
       </div>
-      
+
       <div className="mb-6">
-        <label htmlFor="segment" className="block mb-3 text-light font-semibold">Insurance Segment *</label>
-        <select id="segment" required className="w-full px-4 py-3 bg-white/3 border border-white/10 rounded-xl text-light focus:outline-none focus:border-primary focus:bg-white/5 transition-all">
+        <label htmlFor="segment" className="block mb-3 text-light font-semibold">Insurance Segment <span className="text-red-500">*</span></label>
+        <select id="segment" name="segment" required className="w-full px-4 py-3 bg-white/3 border border-white/10 rounded-xl text-light focus:outline-none focus:border-primary focus:bg-white/5 transition-all">
           <option value="">Select your segment</option>
           <option value="life">Life Insurance</option>
           <option value="health">Health Insurance</option>
@@ -51,10 +89,10 @@ export default function ContactForm() {
           <option value="other">Other</option>
         </select>
       </div>
-      
+
       <div className="mb-6">
         <label htmlFor="interest" className="block mb-3 text-light font-semibold">Area of Interest</label>
-        <select id="interest" className="w-full px-4 py-3 bg-white/3 border border-white/10 rounded-xl text-light focus:outline-none focus:border-primary focus:bg-white/5 transition-all">
+        <select id="interest" name="interest" className="w-full px-4 py-3 bg-white/3 border border-white/10 rounded-xl text-light focus:outline-none focus:border-primary focus:bg-white/5 transition-all">
           <option value="">What are you looking for?</option>
           <option value="platform">Complete Platform Demo</option>
           <option value="policy">Policy Administration</option>
@@ -65,14 +103,18 @@ export default function ContactForm() {
           <option value="pricing">Pricing Information</option>
         </select>
       </div>
-      
+
       <div className="mb-6">
         <label htmlFor="message" className="block mb-3 text-light font-semibold">Additional Details</label>
-        <textarea id="message" rows={5} placeholder="Tell us about your current challenges and requirements..." className="w-full px-4 py-3 bg-white/3 border border-white/10 rounded-xl text-light focus:outline-none focus:border-primary focus:bg-white/5 transition-all resize-vertical" />
+        <textarea id="message" name="message" rows={5} placeholder="Tell us about your current challenges and requirements..." className="w-full px-4 py-3 bg-white/3 border border-white/10 rounded-xl text-light focus:outline-none focus:border-primary focus:bg-white/5 transition-all resize-vertical" />
       </div>
-      
-      <button type="submit" className="w-full bg-gradient-to-r from-primary to-secondary text-white px-9 py-4 rounded-xl font-semibold text-lg hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/40 transition-all">
-        Request Demo
+
+      <button
+        type="submit"
+        disabled={isSubmitting}
+        className="w-full bg-gradient-to-r from-primary to-secondary text-white px-9 py-4 rounded-xl font-semibold text-lg hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+      >
+        {isSubmitting ? 'Sending...' : 'Request Demo'}
       </button>
     </form>
   )
