@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-12 border-t border-white/5 text-center text-gray text-xs">
-          <p>&copy; 2025 NIZSOFT Technology LLC. All rights reserved. | <Link href="#" className="hover:text-white">Privacy</Link> | <Link href="#" className="hover:text-white">Terms</Link> | <Link href="#" className="hover:text-white">Security</Link> | <Link href="#" className="hover:text-white">SLA</Link></p>
+          <p>&copy; 2025 NIZSOFT Technology LLC. All rights reserved. | <Link href="/privacy" className="hover:text-white">Privacy</Link> | <Link href="#" className="hover:text-white">Terms</Link> | <Link href="#" className="hover:text-white">Security</Link> | <Link href="#" className="hover:text-white">SLA</Link></p>
         </div>
       </div>
     </footer>
