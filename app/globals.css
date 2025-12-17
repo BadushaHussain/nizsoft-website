@@ -97,11 +97,6 @@ body {
 }
 
 /* Light theme background overrides */
-.light .bg-\[#0a0e27\],
-.light .bg-\[#141829\] {
-  background: #ffffff !important;
-}
-
 .light nav {
   background: rgba(255, 255, 255, 0.95) !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
@@ -112,7 +107,7 @@ body {
   border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
 
-.light footer .border-white\/5 {
+.light footer [class*="border-white"] {
   border-color: rgba(0, 0, 0, 0.1) !important;
 }
 
@@ -125,7 +120,7 @@ body {
 }
 
 /* Light theme sticky CTA */
-.light .bg-dark-light\/80 {
+.light [class*="bg-dark-light"] {
   background: rgba(255, 255, 255, 0.80) !important;
 }
 
