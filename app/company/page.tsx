@@ -12,7 +12,7 @@ export default function CompanyPage() {
           title="Building the Future of Insurance Technology"
           description="Founded in Abu Dhabi with a mission to modernize insurance operations globally"
         />
-        
+
         <div className="mb-12">
           <FeatureItem
             icon="🎯"
@@ -20,7 +20,7 @@ export default function CompanyPage() {
             description="To democratize access to enterprise-grade insurance technology. We combine the innovation and agility of a startup with the reliability and completeness expected by enterprise insurers. NIZSOFT is production-ready, not MVP—a complete platform built to scale with your business."
           />
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
           <Card
             icon="👔"
@@ -43,7 +43,7 @@ export default function CompanyPage() {
             description="Round-the-clock support with SLA-backed response times. Dedicated customer success managers and technical account managers."
           />
         </div>
-        
+
         <Stats items={[
           { value: '2024', label: 'Founded in Abu Dhabi' },
           { value: '100+', label: 'Team Members' },

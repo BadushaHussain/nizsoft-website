@@ -53,7 +53,7 @@ export default function Navigation() {
           <li><Link href="/" className="text-light hover:text-white transition-colors font-medium">Home</Link></li>
           <li className="relative group">
             <span className="text-light hover:text-white transition-colors font-medium cursor-pointer">Platform</span>
-            <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-dark-light/98 backdrop-blur-xl border border-white/10 rounded-xl p-4 min-w-[220px] shadow-2xl z-[110]">
+            <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-dark-light/98 backdrop-blur-xl border border-white/10 rounded-xl p-4 min-w-[220px] shadow-2xl z-[200]">
               <Link href="/platform" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Overview</Link>
               <Link href="/operations" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Operations Hub</Link>
               <Link href="/analytics" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Analytics & AI</Link>
@@ -64,7 +64,7 @@ export default function Navigation() {
           </li>
           <li className="relative group">
             <span className="text-light hover:text-white transition-colors font-medium cursor-pointer">Solutions</span>
-            <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-dark-light/98 backdrop-blur-xl border border-white/10 rounded-xl p-4 min-w-[220px] shadow-2xl z-[110]">
+            <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-dark-light/98 backdrop-blur-xl border border-white/10 rounded-xl p-4 min-w-[220px] shadow-2xl z-[200]">
               <Link href="/solutions" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">All Solutions</Link>
               <Link href="/policy" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Policy Admin</Link>
               <Link href="/claims" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Claims</Link>
@@ -75,7 +75,7 @@ export default function Navigation() {
           </li>
           <li className="relative group">
             <span className="text-light hover:text-white transition-colors font-medium cursor-pointer">Technology</span>
-            <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-dark-light/98 backdrop-blur-xl border border-white/10 rounded-xl p-4 min-w-[220px] shadow-2xl z-[110]">
+            <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-dark-light/98 backdrop-blur-xl border border-white/10 rounded-xl p-4 min-w-[220px] shadow-2xl z-[200]">
               <Link href="/architecture" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Architecture</Link>
               <Link href="/integrations" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Integrations</Link>
               <Link href="/ai-automation" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">AI & Automation</Link>
