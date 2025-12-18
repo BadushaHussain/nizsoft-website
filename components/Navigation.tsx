@@ -192,7 +192,7 @@ export default function Navigation() {
                   <div>
                     <button
                       onClick={() => toggleDropdown('solutions')}
-                      className="w-full flex justify-between items-center px-4 py-3 text-light hover:text-white hover:bg-primary/10 rounded-lg transition-all font-medium"
+                      className="w-full flex justify-between items-center px-4 py-3 text-gray-700 dark:text-light hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all font-medium"
                     >
                       Solutions
                       <motion.span
@@ -227,7 +227,7 @@ export default function Navigation() {
                   <div>
                     <button
                       onClick={() => toggleDropdown('technology')}
-                      className="w-full flex justify-between items-center px-4 py-3 text-light hover:text-white hover:bg-primary/10 rounded-lg transition-all font-medium"
+                      className="w-full flex justify-between items-center px-4 py-3 text-gray-700 dark:text-light hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all font-medium"
                     >
                       Technology
                       <motion.span
