@@ -54,32 +54,32 @@ export default function Navigation() {
           <li className="relative group">
             <span className="text-light hover:text-white transition-colors font-medium cursor-pointer">Platform</span>
             <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-dark-light/98 backdrop-blur-xl border border-white/10 rounded-xl p-4 min-w-[220px] shadow-2xl z-[110]">
-              <Link href="/platform" className="block px-6 py-3 text-gray hover:text-white hover:bg-primary/10 rounded-lg transition-all">Overview</Link>
-              <Link href="/operations" className="block px-6 py-3 text-gray hover:text-white hover:bg-primary/10 rounded-lg transition-all">Operations Hub</Link>
-              <Link href="/analytics" className="block px-6 py-3 text-gray hover:text-white hover:bg-primary/10 rounded-lg transition-all">Analytics & AI</Link>
-              <Link href="/migration" className="block px-6 py-3 text-gray hover:text-white hover:bg-primary/10 rounded-lg transition-all">Migration</Link>
-              <Link href="/security" className="block px-6 py-3 text-gray hover:text-white hover:bg-primary/10 rounded-lg transition-all">Security</Link>
-              <Link href="/deployment" className="block px-6 py-3 text-gray hover:text-white hover:bg-primary/10 rounded-lg transition-all">Deployment</Link>
+              <Link href="/platform" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Overview</Link>
+              <Link href="/operations" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Operations Hub</Link>
+              <Link href="/analytics" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Analytics & AI</Link>
+              <Link href="/migration" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Migration</Link>
+              <Link href="/security" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Security</Link>
+              <Link href="/deployment" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Deployment</Link>
             </div>
           </li>
           <li className="relative group">
             <span className="text-light hover:text-white transition-colors font-medium cursor-pointer">Solutions</span>
             <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-dark-light/98 backdrop-blur-xl border border-white/10 rounded-xl p-4 min-w-[220px] shadow-2xl z-[110]">
-              <Link href="/solutions" className="block px-6 py-3 text-gray hover:text-white hover:bg-primary/10 rounded-lg transition-all">All Solutions</Link>
-              <Link href="/policy" className="block px-6 py-3 text-gray hover:text-white hover:bg-primary/10 rounded-lg transition-all">Policy Admin</Link>
-              <Link href="/claims" className="block px-6 py-3 text-gray hover:text-white hover:bg-primary/10 rounded-lg transition-all">Claims</Link>
-              <Link href="/billing" className="block px-6 py-3 text-gray hover:text-white hover:bg-primary/10 rounded-lg transition-all">Billing</Link>
-              <Link href="/underwriting" className="block px-6 py-3 text-gray hover:text-white hover:bg-primary/10 rounded-lg transition-all">Underwriting</Link>
-              <Link href="/broker-portal" className="block px-6 py-3 text-gray hover:text-white hover:bg-primary/10 rounded-lg transition-all">Broker Portal</Link>
+              <Link href="/solutions" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">All Solutions</Link>
+              <Link href="/policy" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Policy Admin</Link>
+              <Link href="/claims" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Claims</Link>
+              <Link href="/billing" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Billing</Link>
+              <Link href="/underwriting" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Underwriting</Link>
+              <Link href="/broker-portal" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Broker Portal</Link>
             </div>
           </li>
           <li className="relative group">
             <span className="text-light hover:text-white transition-colors font-medium cursor-pointer">Technology</span>
             <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-dark-light/98 backdrop-blur-xl border border-white/10 rounded-xl p-4 min-w-[220px] shadow-2xl z-[110]">
-              <Link href="/architecture" className="block px-6 py-3 text-gray hover:text-white hover:bg-primary/10 rounded-lg transition-all">Architecture</Link>
-              <Link href="/integrations" className="block px-6 py-3 text-gray hover:text-white hover:bg-primary/10 rounded-lg transition-all">Integrations</Link>
-              <Link href="/ai-automation" className="block px-6 py-3 text-gray hover:text-white hover:bg-primary/10 rounded-lg transition-all">AI & Automation</Link>
-              <Link href="/cloud" className="block px-6 py-3 text-gray hover:text-white hover:bg-primary/10 rounded-lg transition-all">Cloud</Link>
+              <Link href="/architecture" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Architecture</Link>
+              <Link href="/integrations" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Integrations</Link>
+              <Link href="/ai-automation" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">AI & Automation</Link>
+              <Link href="/cloud" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Cloud</Link>
             </div>
           </li>
           <li><Link href="/industries" className="text-light hover:text-white transition-colors font-medium">Industries</Link></li>
@@ -140,7 +140,7 @@ export default function Navigation() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 bottom-0 w-[85%] max-w-[400px] bg-dark-light/98 backdrop-blur-xl border-l border-white/10 z-50 overflow-y-auto lg:hidden"
+              className="fixed top-0 right-0 bottom-0 w-[85%] max-w-[400px] bg-white dark:bg-dark-light backdrop-blur-xl border-l border-gray-200 dark:border-white/10 z-50 overflow-y-auto lg:hidden"
             >
               <div className="p-6 pt-20">
                 {/* Mobile Navigation Links */}
@@ -148,7 +148,7 @@ export default function Navigation() {
                   <Link
                     href="/"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-3 text-light hover:text-white hover:bg-primary/10 rounded-lg transition-all font-medium"
+                    className="block px-4 py-3 text-gray-700 dark:text-light hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all font-medium"
                   >
                     Home
                   </Link>
@@ -157,7 +157,7 @@ export default function Navigation() {
                   <div>
                     <button
                       onClick={() => toggleDropdown('platform')}
-                      className="w-full flex justify-between items-center px-4 py-3 text-light hover:text-white hover:bg-primary/10 rounded-lg transition-all font-medium"
+                      className="w-full flex justify-between items-center px-4 py-3 text-gray-700 dark:text-light hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all font-medium"
                     >
                       Platform
                       <motion.span
@@ -177,12 +177,12 @@ export default function Navigation() {
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden pl-4"
                         >
-                          <Link href="/platform" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray hover:text-white transition-all">Overview</Link>
-                          <Link href="/operations" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray hover:text-white transition-all">Operations Hub</Link>
-                          <Link href="/analytics" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray hover:text-white transition-all">Analytics & AI</Link>
-                          <Link href="/migration" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray hover:text-white transition-all">Migration</Link>
-                          <Link href="/security" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray hover:text-white transition-all">Security</Link>
-                          <Link href="/deployment" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray hover:text-white transition-all">Deployment</Link>
+                          <Link href="/platform" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white transition-all">Overview</Link>
+                          <Link href="/operations" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white transition-all">Operations Hub</Link>
+                          <Link href="/analytics" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white transition-all">Analytics & AI</Link>
+                          <Link href="/migration" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white transition-all">Migration</Link>
+                          <Link href="/security" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white transition-all">Security</Link>
+                          <Link href="/deployment" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white transition-all">Deployment</Link>
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -212,12 +212,12 @@ export default function Navigation() {
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden pl-4"
                         >
-                          <Link href="/solutions" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray hover:text-white transition-all">All Solutions</Link>
-                          <Link href="/policy" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray hover:text-white transition-all">Policy Admin</Link>
-                          <Link href="/claims" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray hover:text-white transition-all">Claims</Link>
-                          <Link href="/billing" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray hover:text-white transition-all">Billing</Link>
-                          <Link href="/underwriting" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray hover:text-white transition-all">Underwriting</Link>
-                          <Link href="/broker-portal" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray hover:text-white transition-all">Broker Portal</Link>
+                          <Link href="/solutions" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white transition-all">All Solutions</Link>
+                          <Link href="/policy" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white transition-all">Policy Admin</Link>
+                          <Link href="/claims" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white transition-all">Claims</Link>
+                          <Link href="/billing" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white transition-all">Billing</Link>
+                          <Link href="/underwriting" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white transition-all">Underwriting</Link>
+                          <Link href="/broker-portal" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white transition-all">Broker Portal</Link>
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -247,10 +247,10 @@ export default function Navigation() {
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden pl-4"
                         >
-                          <Link href="/architecture" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray hover:text-white transition-all">Architecture</Link>
-                          <Link href="/integrations" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray hover:text-white transition-all">Integrations</Link>
-                          <Link href="/ai-automation" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray hover:text-white transition-all">AI & Automation</Link>
-                          <Link href="/cloud" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray hover:text-white transition-all">Cloud</Link>
+                          <Link href="/architecture" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white transition-all">Architecture</Link>
+                          <Link href="/integrations" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white transition-all">Integrations</Link>
+                          <Link href="/ai-automation" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white transition-all">AI & Automation</Link>
+                          <Link href="/cloud" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2.5 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white transition-all">Cloud</Link>
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -259,7 +259,7 @@ export default function Navigation() {
                   <Link
                     href="/industries"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-3 text-light hover:text-white hover:bg-primary/10 rounded-lg transition-all font-medium"
+                    className="block px-4 py-3 text-gray-700 dark:text-light hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all font-medium"
                   >
                     Industries
                   </Link>
@@ -267,16 +267,16 @@ export default function Navigation() {
                   <Link
                     href="/company"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-3 text-light hover:text-white hover:bg-primary/10 rounded-lg transition-all font-medium"
+                    className="block px-4 py-3 text-gray-700 dark:text-light hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all font-medium"
                   >
                     Company
                   </Link>
                 </nav>
 
                 {/* Mobile Theme Toggle */}
-                <div className="mt-6 px-4 py-3 bg-white/5 rounded-lg">
+                <div className="mt-6 px-4 py-3 bg-gray-100 dark:bg-white/5 rounded-lg">
                   <div className="flex items-center justify-between">
-                    <span className="text-light font-medium">Theme</span>
+                    <span className="text-gray-700 dark:text-light font-medium">Theme</span>
                     <ThemeToggle />
                   </div>
                 </div>
