@@ -1,9 +1,19 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import Hero from '@/components/Hero'
 import SectionHeader from '@/components/SectionHeader'
 import Card from '@/components/Card'
 import FeatureItem from '@/components/FeatureItem'
-import Stats from '@/components/Stats'
+import { HiCpuChip, HiArrowPath, HiClock, HiLink } from 'react-icons/hi2'
+import { HiDocumentText, HiBolt, HiCreditCard, HiUsers, HiUserGroup, HiChartBar } from 'react-icons/hi2'
+import { TbTargetArrow, TbRefresh } from 'react-icons/tb'
+import { HiCloud, HiShieldCheck, HiCube } from 'react-icons/hi2'
+
+// Lazy load Stats component (below the fold)
+const Stats = dynamic(() => import('@/components/Stats'), {
+  ssr: true,
+})
 
 export default function Home() {
   return (
@@ -16,29 +26,59 @@ export default function Home() {
       />
 
       {/* Partners Section */}
-      <section className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20">
+      <section className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20 overflow-hidden">
         <SectionHeader
           label="Trusted By"
           title="Insurance Leaders Choose NIZSOFT"
         />
-        <div className="flex justify-around items-center flex-wrap gap-8 lg:gap-12 opacity-70 hover:opacity-100 transition-opacity">
-          {[
-            { name: 'ADNIC', logo: '/partners/adnic.png' },
-            { name: 'Cigna', logo: '/partners/cigna.png' },
-            { name: 'Daman', logo: '/partners/daman.png' },
-            { name: 'GIG', logo: '/partners/gig.png' },
-            { name: 'MetLife', logo: '/partners/metlife.png' },
-          ].map((partner, i) => (
-            <div key={i} className="grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
-              <Image
-                src={partner.logo}
-                alt={`${partner.name} Logo`}
-                width={160}
-                height={60}
-                className="h-12 lg:h-14 w-auto object-contain"
-              />
-            </div>
-          ))}
+        <div className="relative">
+          {/* Gradient overlays for smooth edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white dark:from-dark to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white dark:from-dark to-transparent z-10" />
+
+          {/* Auto-sliding logos */}
+          <div className="flex animate-scroll">
+            {/* First set of logos */}
+            {[
+              { name: 'ADNIC', logo: '/partners/adnic.png' },
+              { name: 'Cigna', logo: '/partners/cigna.png' },
+              { name: 'Daman', logo: '/partners/daman.png' },
+              { name: 'GIG', logo: '/partners/gig.png' },
+              { name: 'MetLife', logo: '/partners/metlife.png' },
+            ].map((partner, i) => (
+              <div key={`first-${i}`} className="flex-shrink-0 mx-8 lg:mx-12 hover:grayscale transition-all duration-300 hover:scale-110">
+                <Image
+                  src={partner.logo}
+                  alt={`${partner.name} Logo`}
+                  width={160}
+                  height={60}
+                  className="h-12 lg:h-14 w-auto object-contain"
+                  priority={false}
+                  loading="lazy"
+                />
+              </div>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {[
+              { name: 'ADNIC', logo: '/partners/adnic.png' },
+              { name: 'Cigna', logo: '/partners/cigna.png' },
+              { name: 'Daman', logo: '/partners/daman.png' },
+              { name: 'GIG', logo: '/partners/gig.png' },
+              { name: 'MetLife', logo: '/partners/metlife.png' },
+            ].map((partner, i) => (
+              <div key={`second-${i}`} className="flex-shrink-0 mx-8 lg:mx-12 hover:grayscale transition-all duration-300 hover:scale-110">
+                <Image
+                  src={partner.logo}
+                  alt={`${partner.name} Logo`}
+                  width={160}
+                  height={60}
+                  className="h-12 lg:h-14 w-auto object-contain"
+                  priority={false}
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -51,21 +91,24 @@ export default function Home() {
         />
 
         <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-white/8 rounded-3xl p-8 lg:p-12 my-12">
-          <div className="text-center text-xl lg:text-2xl font-bold text-white mb-8">🏗️ NIZSOFT Platform Architecture</div>
+          <div className="text-center text-xl lg:text-2xl font-bold text-white mb-8 flex items-center justify-center gap-3">
+            <HiCpuChip className="text-primary" />
+            NIZSOFT Platform Architecture
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6">
             {[
-              { icon: '📋', title: 'Policy', subtitle: 'Quote to Renewal' },
-              { icon: '⚡', title: 'Claims', subtitle: 'FNOL to Settlement' },
-              { icon: '💳', title: 'Billing', subtitle: 'Automated Collections' },
-              { icon: '📊', title: 'Analytics', subtitle: 'Real-Time Insights' },
-              { icon: '👥', title: 'Portals', subtitle: 'Customer & Broker' },
-              { icon: '🔗', title: 'APIs', subtitle: 'RESTful Integration' },
+              { icon: <HiDocumentText className="text-white" />, title: 'Policy', subtitle: 'Quote to Renewal', link: '/policy' },
+              { icon: <HiBolt className="text-white" />, title: 'Claims', subtitle: 'FNOL to Settlement', link: '/claims' },
+              { icon: <HiCreditCard className="text-white" />, title: 'Billing', subtitle: 'Automated Collections', link: '/billing' },
+              { icon: <HiChartBar className="text-white" />, title: 'Analytics', subtitle: 'Real-Time Insights', link: '/analytics' },
+              { icon: <HiUsers className="text-white" />, title: 'Portals', subtitle: 'Customer & Broker', link: '/broker-portal' },
+              { icon: <HiLink className="text-white" />, title: 'APIs', subtitle: 'RESTful Integration', link: '/integrations' },
             ].map((item, i) => (
-              <div key={i} className="bg-white/3 border-2 border-primary/30 rounded-xl p-4 lg:p-6 text-center hover:border-primary hover:bg-primary/5 hover:scale-105 transition-all">
-                <div className="text-2xl lg:text-3xl mb-2">{item.icon}</div>
+              <Link key={i} href={item.link} className="bg-white/3 border-2 border-primary/30 rounded-xl p-4 lg:p-6 text-center hover:border-primary hover:bg-primary/5 hover:scale-105 transition-all cursor-pointer">
+                <div className="text-2xl lg:text-3xl mb-2 flex justify-center">{item.icon}</div>
                 <h4 className="text-white font-bold mb-1 text-sm lg:text-base">{item.title}</h4>
                 <p className="text-gray text-xs lg:text-sm">{item.subtitle}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -77,26 +120,30 @@ export default function Home() {
           label="Key Capabilities"
           title="Built for Modern Insurance Operations"
         />
-        <div className="space-y-6 lg:space-y-8">
+        <div className="space-y-8 lg:space-y-12">
           <FeatureItem
-            icon="🤖"
+            icon={<HiCpuChip className="text-primary" />}
             title="AI-Powered Automation"
             description="Intelligent document processing, predictive underwriting, fraud detection, and AI chatbots that reduce manual work by up to 60% while improving accuracy."
+            link="/ai-automation"
           />
           <FeatureItem
-            icon="🔄"
+            icon={<HiArrowPath className="text-secondary" />}
             title="Seamless Data Migration"
             description="Proven migration methodology from legacy systems with zero data loss. Automated ETL pipelines, data validation, and parallel run support ensure smooth transition."
+            link="/migration"
           />
           <FeatureItem
-            icon="⏱️"
+            icon={<HiClock className="text-accent" />}
             title="24×7 Enterprise Support"
             description="Dedicated support team with SLA-backed response times. Proactive monitoring, regular health checks, and direct access to technical architects."
+            link="/support"
           />
           <FeatureItem
-            icon="🔗"
+            icon={<HiLink className="text-success" />}
             title="Open Integration Platform"
             description="RESTful APIs, webhooks, and pre-built connectors for CRMs, payment gateways, accounting systems, and third-party data providers. Build custom integrations in days."
+            link="/integrations"
           />
         </div>
       </section>
@@ -108,14 +155,14 @@ export default function Home() {
           title="Everything You Need in One Platform"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          <Card icon="📋" title="Policy Administration" description="Complete lifecycle management from quote generation to renewals with flexible product configuration and automated workflows." href="/policy" />
-          <Card icon="⚡" title="Claims Management" description="Fast, automated claims processing with AI-powered adjudication, fraud detection, and mobile FNOL capabilities." href="/claims" />
-          <Card icon="💳" title="Billing Automation" description="Intelligent billing engine with multi-currency support, flexible payment plans, and automated reconciliation." href="/billing" />
-          <Card icon="🎯" title="Smart Underwriting" description="AI-assisted risk assessment with automated rules engine and third-party data integration for faster decisions." href="/underwriting" />
-          <Card icon="👥" title="Customer Portal" description="Self-service capabilities with mobile apps, policy management, claims filing, and omnichannel communication." href="/solutions" />
-          <Card icon="🤝" title="Broker Portal" description="Empower intermediaries with quote generation, policy management, commission tracking, and performance analytics." href="/broker-portal" />
-          <Card icon="📊" title="Analytics & Reporting" description="Real-time dashboards, predictive analytics, and customizable reports for data-driven decision making." href="/analytics" />
-          <Card icon="🔄" title="Reinsurance Module" description="Treaty and facultative operations with bordereaux processing and automated reinsurance accounting." href="/solutions" />
+          <Card icon={<HiDocumentText className="text-primary" />} title="Policy Administration" description="Complete lifecycle management from quote generation to renewals with flexible product configuration and automated workflows." href="/policy" />
+          <Card icon={<HiBolt className="text-secondary" />} title="Claims Management" description="Fast, automated claims processing with AI-powered adjudication, fraud detection, and mobile FNOL capabilities." href="/claims" />
+          <Card icon={<HiCreditCard className="text-accent" />} title="Billing Automation" description="Intelligent billing engine with multi-currency support, flexible payment plans, and automated reconciliation." href="/billing" />
+          <Card icon={<TbTargetArrow className="text-success" />} title="Smart Underwriting" description="AI-assisted risk assessment with automated rules engine and third-party data integration for faster decisions." href="/underwriting" />
+          <Card icon={<HiUsers className="text-primary" />} title="Customer Portal" description="Self-service capabilities with mobile apps, policy management, claims filing, and omnichannel communication." href="/solutions" />
+          <Card icon={<HiUserGroup className="text-secondary" />} title="Broker Portal" description="Empower intermediaries with quote generation, policy management, commission tracking, and performance analytics." href="/broker-portal" />
+          <Card icon={<HiChartBar className="text-accent" />} title="Analytics & Reporting" description="Real-time dashboards, predictive analytics, and customizable reports for data-driven decision making." href="/analytics" />
+          <Card icon={<TbRefresh className="text-success" />} title="Reinsurance Module" description="Treaty and facultative operations with bordereaux processing and automated reinsurance accounting." href="/solutions" />
         </div>
       </section>
 
@@ -126,10 +173,10 @@ export default function Home() {
           title="Built on Modern Architecture"
         />
         <Stats items={[
-          { value: '☁️', label: 'Cloud-Native\nMulti-cloud ready' },
-          { value: '🔗', label: 'API-First\nRESTful design' },
-          { value: '🏗️', label: 'Microservices\nScalable modules' },
-          { value: '🔒', label: 'Secure\nEnterprise-grade' },
+          { value: <HiCloud className="text-primary" />, label: 'Cloud-Native\nMulti-cloud ready' },
+          { value: <HiLink className="text-secondary" />, label: 'API-First\nRESTful design' },
+          { value: <HiCube className="text-accent" />, label: 'Microservices\nScalable modules' },
+          { value: <HiShieldCheck className="text-success" />, label: 'Secure\nEnterprise-grade' },
         ]} />
       </section>
 

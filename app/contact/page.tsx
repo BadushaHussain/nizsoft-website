@@ -1,6 +1,7 @@
 import SectionHeader from '@/components/SectionHeader'
 import ContactForm from '@/components/ContactForm'
 import Stats from '@/components/Stats'
+import { HiMapPin, HiEnvelope, HiPhone, HiClock } from 'react-icons/hi2'
 
 export default function ContactPage() {
   return (
@@ -11,14 +12,14 @@ export default function ContactPage() {
           title="Experience NIZSOFT in Action"
           description="Schedule a personalized demo tailored to your requirements"
         />
-        
+
         <ContactForm />
-        
+
         <Stats items={[
-          { value: '📍', label: 'Headquarters\nAbu Dhabi, UAE' },
-          { value: '📧', label: 'General\ninfo@nizsoft.com' },
-          { value: '📞', label: 'Sales\nsales@nizsoft.com' },
-          { value: '⏱️', label: '24×7 Support\nsupport@nizsoft.com' },
+          { value: <HiMapPin className="text-primary" />, label: 'Headquarters\nAbu Dhabi, UAE' },
+          { value: <HiEnvelope className="text-secondary" />, label: 'General\ninfo@nizsoft.com' },
+          { value: <HiPhone className="text-accent" />, label: 'Sales\nsales@nizsoft.com' },
+          { value: <HiClock className="text-success" />, label: '24×7 Support\nsupport@nizsoft.com' },
         ]} />
       </section>
     </div>

@@ -1,14 +1,23 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import dynamic from 'next/dynamic'
 import Navigation from '@/components/Navigation'
-import Footer from '@/components/Footer'
 import ReadingProgress from '@/components/ReadingProgress'
 import StickyCTA from '@/components/StickyCTA'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 import { Toaster } from 'react-hot-toast'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+// Lazy load Footer since it's below the fold
+const Footer = dynamic(() => import('@/components/Footer'), {
+  ssr: true, // Still render on server for SEO
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap', // Prevents invisible text during font load
+  preload: true, // Preload the font
+})
 
 export const metadata: Metadata = {
   title: 'NIZSOFT - Modern Insurance Platform for the Digital Era',

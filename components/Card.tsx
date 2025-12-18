@@ -2,9 +2,10 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { ReactNode } from 'react'
 
 interface CardProps {
-  icon: string
+  icon: ReactNode
   title: string
   description: string
   href?: string

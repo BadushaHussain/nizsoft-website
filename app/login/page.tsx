@@ -22,10 +22,10 @@ export default function LoginPage() {
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-dark via-dark-light to-dark relative overflow-hidden">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-dark dark:via-dark-light dark:to-dark relative overflow-hidden">
             {/* Background decorative elements */}
             <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent opacity-30" />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(100,100,100,0.05)_1px,transparent_1px),linear-gradient(rgba(100,100,100,0.05)_1px,transparent_1px)] dark:bg-[linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
             <div className="w-full max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
                 {/* Left side - Decorative */}
@@ -52,7 +52,7 @@ export default function LoginPage() {
 
                 {/* Right side - Login form */}
                 <div className="w-full max-w-md mx-auto lg:mx-0">
-                    <div className="bg-white/5 dark:bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 lg:p-10 shadow-2xl">
+                    <div className="bg-white/95 dark:bg-dark-light/80 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl p-8 lg:p-10 shadow-2xl">
                         {/* Logo and title */}
                         <div className="mb-8">
                             <Link href="/" className="inline-block mb-6">
@@ -64,14 +64,14 @@ export default function LoginPage() {
                                     className="h-8 w-auto"
                                 />
                             </Link>
-                            <h1 className="text-3xl font-bold text-white mb-2">Welcome Back</h1>
-                            <p className="text-gray">Enter your credentials to access your account</p>
+                            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Welcome Back</h1>
+                            <p className="text-gray-600 dark:text-gray-300">Enter your credentials to access your account</p>
                         </div>
 
                         {/* Login form */}
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
-                                <label htmlFor="email" className="block mb-2 text-light font-medium">
+                                <label htmlFor="email" className="block mb-2 text-gray-700 dark:text-light font-medium">
                                     Email
                                 </label>
                                 <input
@@ -80,12 +80,12 @@ export default function LoginPage() {
                                     name="email"
                                     required
                                     placeholder="enter your email"
-                                    className="w-full px-4 py-3 bg-white/5 dark:bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-gray/50 focus:outline-none focus:border-primary focus:bg-white/10 transition-all"
+                                    className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-xl text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray/50 focus:outline-none focus:border-primary focus:bg-white dark:focus:bg-white/10 transition-all"
                                 />
                             </div>
 
                             <div>
-                                <label htmlFor="password" className="block mb-2 text-light font-medium">
+                                <label htmlFor="password" className="block mb-2 text-gray-700 dark:text-light font-medium">
                                     Password
                                 </label>
                                 <input
@@ -94,7 +94,7 @@ export default function LoginPage() {
                                     name="password"
                                     required
                                     placeholder="enter your password"
-                                    className="w-full px-4 py-3 bg-white/5 dark:bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-gray/50 focus:outline-none focus:border-primary focus:bg-white/10 transition-all"
+                                    className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-xl text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray/50 focus:outline-none focus:border-primary focus:bg-white dark:focus:bg-white/10 transition-all"
                                 />
                                 <div className="mt-2 text-right">
                                     <button
@@ -108,7 +108,7 @@ export default function LoginPage() {
                             </div>
 
                             <div>
-                                <label htmlFor="groupCode" className="block mb-2 text-light font-medium">
+                                <label htmlFor="groupCode" className="block mb-2 text-gray-700 dark:text-light font-medium">
                                     Group Code
                                 </label>
                                 <input
@@ -116,7 +116,7 @@ export default function LoginPage() {
                                     id="groupCode"
                                     name="groupCode"
                                     placeholder="enter your group code"
-                                    className="w-full px-4 py-3 bg-white/5 dark:bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-gray/50 focus:outline-none focus:border-primary focus:bg-white/10 transition-all"
+                                    className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-xl text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray/50 focus:outline-none focus:border-primary focus:bg-white dark:focus:bg-white/10 transition-all"
                                 />
                             </div>
 
@@ -131,7 +131,7 @@ export default function LoginPage() {
 
                         {/* Register link */}
                         <div className="mt-6 text-center">
-                            <p className="text-gray text-sm">
+                            <p className="text-gray-600 dark:text-gray text-sm">
                                 New User?{' '}
                                 <button
                                     onClick={() => toast.error('Registration is not available')}
@@ -144,8 +144,7 @@ export default function LoginPage() {
                     </div>
 
                     {/* Additional info */}
-                    <p className="text-center text-gray text-sm mt-6">
-                        This is a demo login page. All login attempts will show an error message.
+                    <p className="text-center text-gray-600 dark:text-gray text-sm mt-6">
                     </p>
                 </div>
             </div>

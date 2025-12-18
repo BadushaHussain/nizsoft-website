@@ -1,10 +1,11 @@
 'use client'
 
+import { ReactNode } from 'react'
 import AnimatedNumber from './animations/AnimatedNumber'
 import FadeIn from './animations/FadeIn'
 
 interface StatItemProps {
-  value: string | number
+  value: string | number | ReactNode
   label: string
   isNumeric?: boolean
   decimals?: number

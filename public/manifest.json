@@ -1,0 +1,24 @@
+{
+    "name": "NIZSOFT - Modern Insurance Platform",
+    "short_name": "NIZSOFT",
+    "description": "Complete end-to-end insurance platform combining startup agility with enterprise reliability",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0e27",
+    "theme_color": "#0066ff",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

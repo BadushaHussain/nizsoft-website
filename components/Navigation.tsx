@@ -89,7 +89,10 @@ export default function Navigation() {
         {/* Desktop CTA & Theme Toggle */}
         <div className="hidden lg:flex items-center gap-4">
           <ThemeToggle />
-          <Link href="/contact" className="bg-gradient-to-r from-primary to-secondary text-white px-7 py-3 rounded-xl font-semibold text-base hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40 transition-all">
+          <Link href="/login" className="text-light hover:text-white transition-colors font-medium">
+            Login
+          </Link>
+          <Link href="/contact" className="bg-gradient-to-r from-primary to-secondary text-white px-5 py-2 rounded-xl font-semibold text-sm hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40 transition-all">
             Book Demo
           </Link>
         </div>
@@ -283,9 +286,16 @@ export default function Navigation() {
 
                 {/* Mobile CTA */}
                 <Link
+                  href="/login"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block mt-6 bg-white/10 dark:bg-white/10 border border-white/20 text-white px-6 py-3 rounded-xl font-semibold text-center hover:bg-white/20 transition-all"
+                >
+                  Login
+                </Link>
+                <Link
                   href="/contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block mt-6 bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-xl font-semibold text-center hover:shadow-xl hover:shadow-primary/40 transition-all"
+                  className="block mt-3 bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-xl font-semibold text-center hover:shadow-xl hover:shadow-primary/40 transition-all"
                 >
                   Book Demo
                 </Link>
