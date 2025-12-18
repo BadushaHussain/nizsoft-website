@@ -89,11 +89,11 @@ export default function Navigation() {
         {/* Desktop CTA & Theme Toggle */}
         <div className="hidden lg:flex items-center gap-4">
           <ThemeToggle />
-          <Link href="/login" className="text-light hover:text-white transition-colors font-medium">
+          <Link
+            href="/login"
+            className="text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white transition-colors font-medium px-4 py-2"
+          >
             Login
-          </Link>
-          <Link href="/contact" className="bg-gradient-to-r from-primary to-secondary text-white px-5 py-2 rounded-xl font-semibold text-sm hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40 transition-all">
-            Book Demo
           </Link>
         </div>
 
