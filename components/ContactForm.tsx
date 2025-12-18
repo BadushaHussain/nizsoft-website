@@ -5,6 +5,7 @@ import toast from 'react-hot-toast'
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [formKey, setFormKey] = useState(0) // Add key to force remount
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -39,20 +40,8 @@ ${formData.get('message') || 'No additional details provided'}
 
       toast.success('Thank you for your interest! Check your email for confirmation. Our team will contact you within 24 hours.')
 
-      // Reset form safely and clear all inputs
-      const form = e.currentTarget
-      if (form) {
-        form.reset()
-        // Also manually clear all input values to ensure they're cleared
-        const inputs = form.querySelectorAll('input, textarea, select')
-        inputs.forEach((input: any) => {
-          if (input.type === 'checkbox' || input.type === 'radio') {
-            input.checked = false
-          } else {
-            input.value = ''
-          }
-        })
-      }
+      // Force form remount by changing key
+      setFormKey(prev => prev + 1)
     } catch (error) {
       console.error('Form submission error:', error)
       toast.error('Failed to send your request. Please try again or contact us directly.')
@@ -62,7 +51,12 @@ ${formData.get('message') || 'No additional details provided'}
   }
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-3xl mx-auto p-6 lg:p-12 bg-gradient-to-br from-white/5 to-white/2 border border-white/8 rounded-3xl">
+    <form
+      key={formKey}
+      onSubmit={handleSubmit}
+      autoComplete="off"
+      className="max-w-3xl mx-auto p-6 lg:p-12 bg-gradient-to-br from-white/5 to-white/2 border border-white/8 rounded-3xl"
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div>
           <label htmlFor="firstName" className="block mb-3 text-light font-semibold">First Name <span className="text-red-500">*</span></label>
