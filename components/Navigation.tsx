@@ -107,15 +107,15 @@ export default function Navigation() {
         >
           <motion.span
             animate={mobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-            className="w-6 h-0.5 bg-light transition-all pointer-events-none"
+            className="w-6 h-0.5 bg-gray-700 dark:bg-light transition-all pointer-events-none"
           />
           <motion.span
             animate={mobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-            className="w-6 h-0.5 bg-light transition-all pointer-events-none"
+            className="w-6 h-0.5 bg-gray-700 dark:bg-light transition-all pointer-events-none"
           />
           <motion.span
             animate={mobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-            className="w-6 h-0.5 bg-light transition-all pointer-events-none"
+            className="w-6 h-0.5 bg-gray-700 dark:bg-light transition-all pointer-events-none"
           />
         </button>
       </div>
