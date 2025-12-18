@@ -268,6 +268,14 @@ export default function Navigation() {
                   </Link>
                 </nav>
 
+                {/* Mobile Theme Toggle */}
+                <div className="mt-6 px-4 py-3 bg-white/5 rounded-lg">
+                  <div className="flex items-center justify-between">
+                    <span className="text-light font-medium">Theme</span>
+                    <ThemeToggle />
+                  </div>
+                </div>
+
                 {/* Mobile CTA */}
                 <Link
                   href="/contact"
