@@ -52,7 +52,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-12 border-t border-white/5 text-center text-gray text-xs">
+        <div className="pt-12 border-t border-white/5 text-center text-gray text-sm">
           <p>&copy; 2025 NIZSOFT Technology LLC. All rights reserved. | <Link href="/privacy" className="hover:text-white">Privacy</Link> | <Link href="/terms" className="hover:text-white">Terms</Link> | <Link href="/security" className="hover:text-white">Security</Link> | <Link href="/sla" className="hover:text-white">SLA</Link></p>
         </div>
       </div>
