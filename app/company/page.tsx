@@ -2,6 +2,7 @@ import SectionHeader from '@/components/SectionHeader'
 import FeatureItem from '@/components/FeatureItem'
 import Card from '@/components/Card'
 import Stats from '@/components/Stats'
+import { HiViewfinderCircle, HiUserGroup, HiUsers, HiBriefcase, HiClock } from 'react-icons/hi2'
 
 export default function CompanyPage() {
   return (
@@ -15,7 +16,7 @@ export default function CompanyPage() {
 
         <div className="mb-12">
           <FeatureItem
-            icon="🎯"
+            icon={<HiViewfinderCircle className="text-primary" />}
             title="Our Mission"
             description="To democratize access to enterprise-grade insurance technology. We combine the innovation and agility of a startup with the reliability and completeness expected by enterprise insurers. NIZSOFT is production-ready, not MVP—a complete platform built to scale with your business."
           />
@@ -23,22 +24,22 @@ export default function CompanyPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
           <Card
-            icon="👔"
+            icon={<HiUserGroup className="text-secondary" />}
             title="Leadership"
             description="Experienced team with backgrounds from leading insurance companies, technology firms, and enterprise software vendors."
           />
           <Card
-            icon="🤝"
+            icon={<HiUsers className="text-accent" />}
             title="Partners"
             description="Strategic partnerships with AWS, Azure, Oracle, and leading system integrators to ensure best-in-class implementation."
           />
           <Card
-            icon="💼"
+            icon={<HiBriefcase className="text-success" />}
             title="Careers"
             description="Join our growing team. We're hiring engineers, product managers, and insurance domain experts. Competitive compensation with equity."
           />
           <Card
-            icon="⏱️"
+            icon={<HiClock className="text-warning" />}
             title="24×7 Support"
             description="Round-the-clock support with SLA-backed response times. Dedicated customer success managers and technical account managers."
           />

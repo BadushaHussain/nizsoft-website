@@ -1,5 +1,6 @@
 import SectionHeader from '@/components/SectionHeader'
 import Card from '@/components/Card'
+import { HiClipboardDocumentList, HiBolt, HiCreditCard } from 'react-icons/hi2'
 
 export default function OperationsPage() {
   return (
@@ -10,20 +11,20 @@ export default function OperationsPage() {
           title="Core Insurance Operations"
           description="Policy, Claims, and Billing—the heart of your insurance business"
         />
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           <Card
-            icon="📋"
+            icon={<HiClipboardDocumentList className="text-primary" />}
             title="Policy Administration"
             description="End-to-end policy lifecycle from quote to renewal. Multi-product support, complex rating engines, automated underwriting rules, document generation, and endorsement processing."
           />
           <Card
-            icon="⚡"
+            icon={<HiBolt className="text-warning" />}
             title="Claims Processing"
             description="Streamlined claims workflows with first notice of loss (FNOL), automated adjudication, settlement processing, fraud detection, and integration with repair networks."
           />
           <Card
-            icon="💳"
+            icon={<HiCreditCard className="text-secondary" />}
             title="Billing & Collections"
             description="Flexible billing schedules, automated payment processing, dunning management, commission calculations, and real-time reconciliation with accounting systems."
           />

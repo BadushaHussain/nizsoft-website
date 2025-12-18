@@ -1,6 +1,7 @@
 import SectionHeader from '@/components/SectionHeader'
 import FeatureItem from '@/components/FeatureItem'
 import Link from 'next/link'
+import { HiCpuChip, HiLink, HiChartBar, HiCheckCircle } from 'react-icons/hi2'
 
 export default function UnderwritingPage() {
   return (
@@ -11,30 +12,30 @@ export default function UnderwritingPage() {
           title="AI-Powered Underwriting"
           description="Intelligent risk assessment and automated decision-making"
         />
-        
+
         <div className="space-y-6 lg:space-y-8">
           <FeatureItem
-            icon="🤖"
+            icon={<HiCpuChip className="text-primary" />}
             title="Automated Underwriting Rules"
             description="Configure complex business rules without coding. Decision trees with multiple risk factors. Automatic approvals, declines, or referrals based on criteria."
           />
           <FeatureItem
-            icon="🔗"
+            icon={<HiLink className="text-secondary" />}
             title="Third-Party Data Integration"
             description="Real-time integration with credit bureaus, MVR reports, medical records, property data, and fraud databases. Enriched risk profiles for better decisions."
           />
           <FeatureItem
-            icon="📊"
+            icon={<HiChartBar className="text-accent" />}
             title="Predictive Risk Scoring"
             description="Machine learning models trained on historical data. Risk scores updated in real-time as new information arrives. Continuous model improvement."
           />
           <FeatureItem
-            icon="✓"
+            icon={<HiCheckCircle className="text-success" />}
             title="Workflow & Task Management"
             description="Automated task assignment to underwriters. Collaborative review with document sharing. SLA tracking and escalation management."
           />
         </div>
-        
+
         <div className="text-center mt-16">
           <Link href="/contact" className="bg-gradient-to-r from-primary to-secondary text-white px-7 lg:px-9 py-3 lg:py-4 rounded-xl font-semibold text-base lg:text-lg hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/40 transition-all inline-block">
             See Underwriting Demo

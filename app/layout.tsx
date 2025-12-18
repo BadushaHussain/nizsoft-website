@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import Navigation from '@/components/Navigation'
 import ReadingProgress from '@/components/ReadingProgress'
 import StickyCTA from '@/components/StickyCTA'
+import Chatbot from '@/components/Chatbot'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 import { Toaster } from 'react-hot-toast'
 import './globals.css'
@@ -50,6 +51,7 @@ export default function RootLayout({
           <main className="mt-[80px] md:mt-[70px]">{children}</main>
           <Footer />
           <StickyCTA />
+          <Chatbot />
           <Toaster
             position="top-right"
             toastOptions={{
