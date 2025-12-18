@@ -38,7 +38,7 @@ export default function RootLayout({
         <ThemeProvider>
           <ReadingProgress />
           <Navigation />
-          <main className="mt-[70px]">{children}</main>
+          <main className="mt-[80px] md:mt-[70px]">{children}</main>
           <Footer />
           <StickyCTA />
           <Toaster

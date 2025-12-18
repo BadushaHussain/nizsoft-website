@@ -25,7 +25,7 @@ export default function StickyCTA() {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: 100, opacity: 0 }}
                     transition={{ duration: 0.3, ease: 'easeOut' }}
-                    className="fixed bottom-0 left-0 right-0 bg-dark-light/80 backdrop-blur-xl border-t border-white/10 p-4 z-40 shadow-2xl"
+                    className="hidden md:block fixed bottom-0 left-0 right-0 bg-dark-light/80 backdrop-blur-xl border-t border-white/10 p-4 z-40 shadow-2xl"
                 >
                     <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
                         <div className="text-center sm:text-left">
