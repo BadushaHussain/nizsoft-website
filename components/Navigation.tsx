@@ -97,20 +97,25 @@ export default function Navigation() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden relative w-10 h-10 flex flex-col justify-center items-center gap-1.5 z-50"
+          onTouchEnd={(e) => {
+            e.preventDefault()
+            setMobileMenuOpen(!mobileMenuOpen)
+          }}
+          className="lg:hidden relative w-12 h-12 flex flex-col justify-center items-center gap-1.5 z-[110] touch-manipulation"
           aria-label="Toggle menu"
+          type="button"
         >
           <motion.span
             animate={mobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-            className="w-6 h-0.5 bg-light transition-all"
+            className="w-6 h-0.5 bg-light transition-all pointer-events-none"
           />
           <motion.span
             animate={mobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-            className="w-6 h-0.5 bg-light transition-all"
+            className="w-6 h-0.5 bg-light transition-all pointer-events-none"
           />
           <motion.span
             animate={mobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-            className="w-6 h-0.5 bg-light transition-all"
+            className="w-6 h-0.5 bg-light transition-all pointer-events-none"
           />
         </button>
       </div>
