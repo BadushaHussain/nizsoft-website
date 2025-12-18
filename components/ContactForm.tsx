@@ -39,10 +39,19 @@ ${formData.get('message') || 'No additional details provided'}
 
       toast.success('Thank you for your interest! Check your email for confirmation. Our team will contact you within 24 hours.')
 
-      // Reset form safely
+      // Reset form safely and clear all inputs
       const form = e.currentTarget
       if (form) {
         form.reset()
+        // Also manually clear all input values to ensure they're cleared
+        const inputs = form.querySelectorAll('input, textarea, select')
+        inputs.forEach((input: any) => {
+          if (input.type === 'checkbox' || input.type === 'radio') {
+            input.checked = false
+          } else {
+            input.value = ''
+          }
+        })
       }
     } catch (error) {
       console.error('Form submission error:', error)
