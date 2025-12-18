@@ -25,12 +25,12 @@ export default function StickyCTA() {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: 100, opacity: 0 }}
                     transition={{ duration: 0.3, ease: 'easeOut' }}
-                    className="hidden md:block fixed bottom-0 left-0 right-0 bg-dark-light/80 backdrop-blur-xl border-t border-white/10 p-4 z-40 shadow-2xl"
+                    className="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-dark-light/80 backdrop-blur-xl border-t border-gray-200 dark:border-white/10 p-4 z-40 shadow-2xl"
                 >
                     <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
                         <div className="text-center sm:text-left">
-                            <p className="text-white font-semibold text-lg">Ready to transform your insurance operations?</p>
-                            <p className="text-gray text-sm">Join leading insurers using NIZSOFT platform</p>
+                            <p className="text-gray-900 dark:text-white font-semibold text-lg">Ready to transform your insurance operations?</p>
+                            <p className="text-gray-600 dark:text-gray text-sm">Join leading insurers using NIZSOFT platform</p>
                         </div>
                         <div className="flex gap-3">
                             <Link
@@ -41,7 +41,7 @@ export default function StickyCTA() {
                             </Link>
                             <Link
                                 href="/platform"
-                                className="bg-white/5 backdrop-blur-lg text-white px-6 py-3 border border-white/10 rounded-xl font-semibold hover:bg-white/10 hover:border-primary transition-all whitespace-nowrap"
+                                className="bg-gray-100 dark:bg-white/5 backdrop-blur-lg text-gray-900 dark:text-white px-6 py-3 border border-gray-300 dark:border-white/10 rounded-xl font-semibold hover:bg-gray-200 dark:hover:bg-white/10 hover:border-primary transition-all whitespace-nowrap"
                             >
                                 Learn More
                             </Link>
