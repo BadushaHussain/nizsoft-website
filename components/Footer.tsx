@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -6,7 +7,13 @@ export default function Footer() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20 pb-40 md:pb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           <div className="lg:col-span-2">
-            <div className="text-3xl font-extrabold gradient-text mb-4">NIZSOFT</div>
+            <Image
+              src="/nizsoft-logo.png"
+              alt="NIZSOFT"
+              width={180}
+              height={60}
+              className="mb-4"
+            />
             <p className="text-gray leading-relaxed mb-8">
               Production-ready insurance platform combining startup innovation with enterprise reliability. Built in Abu Dhabi for global insurers.
             </p>

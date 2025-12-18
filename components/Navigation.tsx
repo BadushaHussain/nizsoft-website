@@ -37,14 +37,14 @@ export default function Navigation() {
       ? 'bg-dark/95 shadow-lg backdrop-blur-xl'
       : 'bg-dark/80 backdrop-blur-xl'
       } border-b border-white/5`}>
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-3 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3 hover:scale-105 transition-transform group">
           <Image
             src="/nizsoft-logo.png"
             alt="Nizsoft Logo"
-            width={180}
-            height={50}
-            className="h-8 lg:h-10 w-auto opacity-90 group-hover:opacity-100 group-hover:drop-shadow-[0_0_12px_rgba(0,102,255,0.3)] transition-all"
+            width={160}
+            height={45}
+            className="h-9 lg:h-11 w-auto opacity-90 group-hover:opacity-100 group-hover:drop-shadow-[0_0_12px_rgba(0,102,255,0.3)] transition-all"
           />
         </Link>
 
