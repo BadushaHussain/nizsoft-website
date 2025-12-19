@@ -23,26 +23,34 @@ export default function CompanyPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
-          <Card
-            icon={<HiUserGroup className="text-secondary" />}
-            title="Leadership"
-            description="Experienced team with backgrounds from leading insurance companies, technology firms, and enterprise software vendors."
-          />
-          <Card
-            icon={<HiUsers className="text-accent" />}
-            title="Partners"
-            description="Strategic partnerships with AWS, Azure, Oracle, and leading system integrators to ensure best-in-class implementation."
-          />
-          <Card
-            icon={<HiBriefcase className="text-success" />}
-            title="Careers"
-            description="Join our growing team. We're hiring engineers, product managers, and insurance domain experts. Competitive compensation with equity."
-          />
-          <Card
-            icon={<HiClock className="text-warning" />}
-            title="24×7 Support"
-            description="Round-the-clock support with SLA-backed response times. Dedicated customer success managers and technical account managers."
-          />
+          <a href="/company/leadership" className="block hover:scale-105 transition-transform">
+            <Card
+              icon={<HiUserGroup className="text-secondary" />}
+              title="Leadership"
+              description="Experienced team with backgrounds from leading insurance companies, technology firms, and enterprise software vendors."
+            />
+          </a>
+          <a href="/company/partners" className="block hover:scale-105 transition-transform">
+            <Card
+              icon={<HiUsers className="text-accent" />}
+              title="Partners"
+              description="Strategic partnerships with AWS, Azure, Oracle, and leading system integrators to ensure best-in-class implementation."
+            />
+          </a>
+          <a href="/company/careers" className="block hover:scale-105 transition-transform">
+            <Card
+              icon={<HiBriefcase className="text-success" />}
+              title="Careers"
+              description="Join our growing team. We're hiring engineers, product managers, and insurance domain experts. Competitive compensation with equity."
+            />
+          </a>
+          <a href="/company/support" className="block hover:scale-105 transition-transform">
+            <Card
+              icon={<HiClock className="text-warning" />}
+              title="24×7 Support"
+              description="Round-the-clock support with SLA-backed response times. Dedicated customer success managers and technical account managers."
+            />
+          </a>
         </div>
 
         <Stats items={[

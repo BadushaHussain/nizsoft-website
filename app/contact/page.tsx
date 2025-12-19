@@ -1,7 +1,7 @@
 import SectionHeader from '@/components/SectionHeader'
 import ContactForm from '@/components/ContactForm'
 import Stats from '@/components/Stats'
-import { HiMapPin, HiEnvelope, HiPhone, HiClock } from 'react-icons/hi2'
+import { MapPin, Mail, Clock } from 'lucide-react'
 
 export default function ContactPage() {
   return (
@@ -16,10 +16,10 @@ export default function ContactPage() {
         <ContactForm />
 
         <Stats items={[
-          { value: <HiMapPin className="text-primary" />, label: 'Headquarters\nAbu Dhabi, UAE' },
-          { value: <HiEnvelope className="text-secondary" />, label: 'General\ninfo@nizsoft.com' },
-          { value: <HiPhone className="text-accent" />, label: 'Sales\nsales@nizsoft.com' },
-          { value: <HiClock className="text-success" />, label: '24×7 Support\nsupport@nizsoft.com' },
+          { value: <MapPin className="text-primary" />, label: 'Headquarters\nAbu Dhabi, UAE' },
+          { value: <Mail className="text-primary" />, label: 'General\ninfo@nizsoft.com' },
+          { value: <Mail className="text-primary" />, label: 'Sales\nsales@nizsoft.com' },
+          { value: <Clock className="text-primary" />, label: '24×7 Support\nsupport@nizsoft.com' },
         ]} />
       </section>
     </div>
