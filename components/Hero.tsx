@@ -23,7 +23,7 @@ export default function Hero({
   showTrustBadges = true
 }: HeroProps) {
   return (
-    <section className="min-h-[90vh] flex items-center justify-center relative overflow-hidden pt-16 md:pt-20">
+    <section className="min-h-[90vh] flex items-center justify-center relative overflow-hidden pt-4 md:pt-6">
       {/* Animated gradient orbs */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-blob"></div>
@@ -39,7 +39,7 @@ export default function Hero({
 
       <div className="max-w-6xl px-6 lg:px-8 text-center relative z-10 animate-fade-in">
         {/* Floating badge with pulse animation */}
-        <div className="inline-block px-7 py-3 bg-success/15 border border-success/40 rounded-full text-success text-xs lg:text-sm font-bold uppercase tracking-wider mb-8 animate-float">
+        <div className="inline-block px-7 py-3 bg-success/15 border border-success/40 rounded-full text-success text-xs lg:text-sm font-bold uppercase tracking-wider mb-4 animate-float">
           {badge}
         </div>
 
