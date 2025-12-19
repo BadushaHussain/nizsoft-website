@@ -33,7 +33,7 @@ export default function PlatformPage() {
                 </div>
                 <div className="mt-4 text-center">
                   <h3 className="text-xl font-semibold text-white">Desktop Login</h3>
-                  <p className="text-gray text-sm mt-1">Elegant login interface with animated graphics</p>
+                  <p className="text-gray text-sm mt-1">Web login interface</p>
                 </div>
               </div>
             </div>
@@ -53,7 +53,7 @@ export default function PlatformPage() {
                 </div>
                 <div className="mt-4 text-center">
                   <h3 className="text-xl font-semibold text-white">Mobile Login</h3>
-                  <p className="text-gray text-sm mt-1">Responsive mobile-first design</p>
+                  <p className="text-gray text-sm mt-1">Mobile login interface</p>
                 </div>
               </div>
             </div>
