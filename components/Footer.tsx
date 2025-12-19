@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa'
 
 export default function Footer() {
   return (
@@ -14,9 +15,48 @@ export default function Footer() {
               height={60}
               className="mb-4"
             />
-            <p className="text-gray leading-relaxed mb-8">
+            <p className="text-gray leading-relaxed mb-6">
               Production-ready insurance platform combining startup innovation with enterprise reliability. Built in Abu Dhabi for global insurers.
             </p>
+            {/* Social Media Links */}
+            <div className="flex gap-4">
+              <a
+                href="https://linkedin.com/company/nizsoft"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-white/5 hover:bg-primary/20 border border-white/10 hover:border-primary/50 flex items-center justify-center transition-all group"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin className="w-5 h-5 text-gray group-hover:text-primary transition-colors" />
+              </a>
+              <a
+                href="https://twitter.com/nizsoft"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-white/5 hover:bg-primary/20 border border-white/10 hover:border-primary/50 flex items-center justify-center transition-all group"
+                aria-label="Twitter"
+              >
+                <FaTwitter className="w-5 h-5 text-gray group-hover:text-primary transition-colors" />
+              </a>
+              <a
+                href="https://facebook.com/nizsoft"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-white/5 hover:bg-primary/20 border border-white/10 hover:border-primary/50 flex items-center justify-center transition-all group"
+                aria-label="Facebook"
+              >
+                <FaFacebook className="w-5 h-5 text-gray group-hover:text-primary transition-colors" />
+              </a>
+              <a
+                href="https://instagram.com/nizsoft"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-white/5 hover:bg-primary/20 border border-white/10 hover:border-primary/50 flex items-center justify-center transition-all group"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="w-5 h-5 text-gray group-hover:text-primary transition-colors" />
+              </a>
+            </div>
           </div>
 
           <div>
