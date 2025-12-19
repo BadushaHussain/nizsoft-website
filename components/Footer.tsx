@@ -16,7 +16,7 @@ export default function Footer() {
               className="mb-4"
             />
             <p className="text-gray leading-relaxed mb-6">
-              Production-ready insurance platform combining startup innovation with enterprise reliability. Built in Abu Dhabi for global insurers.
+              Production ready insurance platform combining startup innovation with enterprise reliability. Built in Abu Dhabi for global insurers.
             </p>
             {/* Social Media Links */}
             <div className="flex gap-4">
