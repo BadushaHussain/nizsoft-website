@@ -20,7 +20,7 @@ export default function Home() {
     <div className="animate-fade-in">
       <Hero
         title="Modern Insurance Software Built for Scale"
-        subtitle="Complete end-to-end insurance platform combining startup agility with enterprise reliability. Cloud-native, API-first architecture with all modules needed for modern insurers—from policy to claims to analytics."
+        subtitle="Complete end to end insurance platform combining startup agility with enterprise reliability. Cloud native, API first architecture with all modules needed for modern insurers from policy to claims to analytics."
         secondaryCTA="Explore Platform"
         secondaryCTALink="/platform"
       />
