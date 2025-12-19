@@ -23,7 +23,7 @@ export default function Hero({
   showTrustBadges = true
 }: HeroProps) {
   return (
-    <section className="min-h-[90vh] flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-[90vh] flex items-center justify-center relative overflow-hidden pt-16 md:pt-20">
       {/* Animated gradient orbs */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-blob"></div>
@@ -31,8 +31,8 @@ export default function Hero({
         <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
       </div>
 
-      {/* Pulsing radial gradient */}
-      <div className="absolute inset-0 bg-gradient-radial from-primary/15 via-transparent to-transparent opacity-30 animate-pulse-slow" />
+      {/* Pulsing radial gradient - reduced on mobile */}
+      <div className="absolute inset-0 bg-gradient-radial from-primary/15 via-transparent to-transparent opacity-5 md:opacity-20 animate-pulse-slow" />
 
       {/* Animated grid */}
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px] animate-grid-move" />

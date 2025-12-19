@@ -22,56 +22,76 @@ export default function LoginPage() {
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-dark dark:via-dark-light dark:to-dark relative overflow-hidden">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-dark dark:via-dark-light dark:to-dark relative overflow-hidden py-8 px-4">
             {/* Background decorative elements */}
-            <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent opacity-30" />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(100,100,100,0.05)_1px,transparent_1px),linear-gradient(rgba(100,100,100,0.05)_1px,transparent_1px)] dark:bg-[linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
+            <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent opacity-40" />
+            <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
 
-            <div className="w-full max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center relative z-10">
                 {/* Left side - Decorative */}
-                <div className="hidden lg:flex flex-col items-center justify-center">
-                    <div className="relative w-full max-w-md">
-                        {/* Animated circles */}
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-96 h-96 border-2 border-primary/20 rounded-full animate-spin-slow" />
-                            <div className="absolute w-80 h-80 border-2 border-secondary/20 rounded-full animate-spin-reverse" />
-                            <div className="absolute w-64 h-64 border-2 border-primary/30 rounded-full animate-spin-slow" />
-                            <div className="absolute w-48 h-48 border-2 border-secondary/30 rounded-full animate-spin-reverse" />
-                            <div className="absolute w-32 h-32 border-2 border-primary/40 rounded-full animate-spin-slow" />
-                        </div>
+                <div className="hidden lg:flex flex-col items-start justify-center space-y-8">
 
-                        {/* Dots on circles */}
+                    {/* Animated circles */}
+                    <div className="relative w-full max-w-lg h-[500px] flex items-center justify-center">
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="absolute top-0 left-1/2 w-3 h-3 bg-primary rounded-full animate-pulse" />
-                            <div className="absolute top-1/4 right-0 w-3 h-3 bg-secondary rounded-full animate-pulse delay-100" />
-                            <div className="absolute bottom-1/4 left-0 w-3 h-3 bg-primary rounded-full animate-pulse delay-200" />
-                            <div className="absolute bottom-0 right-1/3 w-3 h-3 bg-secondary rounded-full animate-pulse delay-300" />
+                            {/* Outermost circle */}
+                            <div className="absolute w-[420px] h-[420px] border-2 border-primary/30 rounded-full animate-spin-slow" style={{ animationDuration: '20s' }}>
+                                <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full" />
+                            </div>
+
+                            {/* Second circle */}
+                            <div className="absolute w-[350px] h-[350px] border-2 border-primary/25 rounded-full animate-spin-reverse" style={{ animationDuration: '18s' }}>
+                                <div className="absolute top-1/4 -right-2 w-4 h-4 bg-primary/70 rounded-full" />
+                            </div>
+
+                            {/* Third circle */}
+                            <div className="absolute w-[280px] h-[280px] border-2 border-primary/30 rounded-full animate-spin-slow" style={{ animationDuration: '16s' }}>
+                                <div className="absolute -bottom-2 left-1/4 w-4 h-4 bg-primary rounded-full" />
+                            </div>
+
+                            {/* Fourth circle */}
+                            <div className="absolute w-[210px] h-[210px] border-2 border-primary/25 rounded-full animate-spin-reverse" style={{ animationDuration: '14s' }}>
+                                <div className="absolute top-1/2 -left-2 w-4 h-4 bg-primary/70 rounded-full" />
+                            </div>
+
+                            {/* Fifth circle */}
+                            <div className="absolute w-[140px] h-[140px] border-2 border-primary/30 rounded-full animate-spin-slow" style={{ animationDuration: '12s' }}>
+                                <div className="absolute -top-2 right-1/3 w-4 h-4 bg-primary rounded-full" />
+                            </div>
+
+                            {/* Center circle */}
+                            <div className="absolute w-20 h-20 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-xl" />
                         </div>
                     </div>
                 </div>
 
                 {/* Right side - Login form */}
                 <div className="w-full max-w-md mx-auto lg:mx-0">
-                    <div className="bg-white/95 dark:bg-dark-light/80 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl p-8 lg:p-10 shadow-2xl">
-                        {/* Logo and title */}
-                        <div className="mb-8">
-                            <Link href="/" className="inline-block mb-6">
+                    <div className="bg-white dark:bg-dark-light backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl">
+                        {/* Logo */}
+                        <div className="mb-6">
+                            <Link href="/" className="inline-block">
                                 <Image
                                     src="/nizsoft-logo.png"
                                     alt="Nizsoft Logo"
-                                    width={150}
-                                    height={40}
-                                    className="h-8 w-auto"
+                                    width={180}
+                                    height={48}
+                                    className="h-8 sm:h-10 w-auto"
                                 />
                             </Link>
-                            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Welcome Back</h1>
-                            <p className="text-gray-600 dark:text-gray-300">Enter your credentials to access your account</p>
+                        </div>
+
+                        {/* Title */}
+                        <div className="mb-6 sm:mb-8">
+                            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2">Welcome Back</h1>
+                            <p className="text-gray-500 dark:text-gray-400 text-sm">Enter your credentials to access your account</p>
                         </div>
 
                         {/* Login form */}
-                        <form onSubmit={handleSubmit} className="space-y-6">
+                        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
                             <div>
-                                <label htmlFor="email" className="block mb-2 text-gray-700 dark:text-light font-medium">
+                                <label htmlFor="email" className="block mb-2 text-sm text-gray-700 dark:text-gray-300 font-medium">
                                     Email
                                 </label>
                                 <input
@@ -80,12 +100,12 @@ export default function LoginPage() {
                                     name="email"
                                     required
                                     placeholder="enter your email"
-                                    className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-xl text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray/50 focus:outline-none focus:border-primary focus:bg-white dark:focus:bg-white/10 transition-all"
+                                    className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                 />
                             </div>
 
                             <div>
-                                <label htmlFor="password" className="block mb-2 text-gray-700 dark:text-light font-medium">
+                                <label htmlFor="password" className="block mb-2 text-sm text-gray-700 dark:text-gray-300 font-medium">
                                     Password
                                 </label>
                                 <input
@@ -94,21 +114,21 @@ export default function LoginPage() {
                                     name="password"
                                     required
                                     placeholder="enter your password"
-                                    className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-xl text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray/50 focus:outline-none focus:border-primary focus:bg-white dark:focus:bg-white/10 transition-all"
+                                    className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                 />
-                                <div className="mt-2 text-right">
+                                <div className="mt-3 text-right">
                                     <button
                                         type="button"
                                         onClick={() => toast.error('Password reset is not available')}
-                                        className="text-primary hover:text-secondary text-sm transition-colors"
+                                        className="text-primary hover:text-primary/80 text-sm font-medium transition-colors py-2 px-1 min-h-[44px] inline-flex items-center"
                                     >
-                                        Forgot Password?
+                                        Forgot Password
                                     </button>
                                 </div>
                             </div>
 
                             <div>
-                                <label htmlFor="groupCode" className="block mb-2 text-gray-700 dark:text-light font-medium">
+                                <label htmlFor="groupCode" className="block mb-2 text-sm text-gray-700 dark:text-gray-300 font-medium">
                                     Group Code
                                 </label>
                                 <input
@@ -116,14 +136,14 @@ export default function LoginPage() {
                                     id="groupCode"
                                     name="groupCode"
                                     placeholder="enter your group code"
-                                    className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-xl text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray/50 focus:outline-none focus:border-primary focus:bg-white dark:focus:bg-white/10 transition-all"
+                                    className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                 />
                             </div>
 
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="w-full bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-xl font-semibold hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                                className="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3.5 rounded-lg font-semibold text-sm shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed mt-6"
                             >
                                 {isSubmitting ? 'Signing in...' : 'Sign in'}
                             </button>
@@ -131,21 +151,17 @@ export default function LoginPage() {
 
                         {/* Register link */}
                         <div className="mt-6 text-center">
-                            <p className="text-gray-600 dark:text-gray text-sm">
+                            <p className="text-gray-500 dark:text-gray-400 text-sm">
                                 New User?{' '}
                                 <button
                                     onClick={() => toast.error('Registration is not available')}
-                                    className="text-primary hover:text-secondary font-semibold transition-colors"
+                                    className="text-primary hover:text-primary/80 font-semibold transition-colors py-2 px-1 min-h-[44px] inline-flex items-center"
                                 >
                                     Register
                                 </button>
                             </p>
                         </div>
                     </div>
-
-                    {/* Additional info */}
-                    <p className="text-center text-gray-600 dark:text-gray text-sm mt-6">
-                    </p>
                 </div>
             </div>
         </div>

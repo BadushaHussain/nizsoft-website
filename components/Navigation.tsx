@@ -33,97 +33,100 @@ export default function Navigation() {
   }
 
   return (
-    <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled
-      ? 'bg-dark/95 shadow-lg backdrop-blur-xl'
-      : 'bg-dark/80 backdrop-blur-xl'
-      } border-b border-white/5`}>
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-3 flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-3 hover:scale-105 transition-transform group">
-          <Image
-            src="/nizsoft-logo.png"
-            alt="Nizsoft Logo"
-            width={160}
-            height={45}
-            className="h-9 lg:h-11 w-auto opacity-90 group-hover:opacity-100 group-hover:drop-shadow-[0_0_12px_rgba(0,102,255,0.3)] transition-all"
-          />
-        </Link>
-
-        {/* Desktop Navigation */}
-        <ul className="hidden lg:flex gap-10 items-center">
-          <li><Link href="/" className="text-light hover:text-white transition-colors font-medium">Home</Link></li>
-          <li className="relative group">
-            <span className="text-light hover:text-white transition-colors font-medium cursor-pointer">Platform</span>
-            <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-dark-light/98 backdrop-blur-xl border border-white/10 rounded-xl p-4 min-w-[220px] shadow-2xl z-[200]">
-              <Link href="/platform" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Overview</Link>
-              <Link href="/operations" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Operations Hub</Link>
-              <Link href="/analytics" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Analytics & AI</Link>
-              <Link href="/migration" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Migration</Link>
-              <Link href="/security" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Security</Link>
-              <Link href="/deployment" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Deployment</Link>
-            </div>
-          </li>
-          <li className="relative group">
-            <span className="text-light hover:text-white transition-colors font-medium cursor-pointer">Solutions</span>
-            <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-dark-light/98 backdrop-blur-xl border border-white/10 rounded-xl p-4 min-w-[220px] shadow-2xl z-[200]">
-              <Link href="/solutions" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">All Solutions</Link>
-              <Link href="/policy" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Policy Admin</Link>
-              <Link href="/claims" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Claims</Link>
-              <Link href="/billing" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Billing</Link>
-              <Link href="/underwriting" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Underwriting</Link>
-              <Link href="/broker-portal" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Broker Portal</Link>
-            </div>
-          </li>
-          <li className="relative group">
-            <span className="text-light hover:text-white transition-colors font-medium cursor-pointer">Technology</span>
-            <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-dark-light/98 backdrop-blur-xl border border-white/10 rounded-xl p-4 min-w-[220px] shadow-2xl z-[200]">
-              <Link href="/architecture" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Architecture</Link>
-              <Link href="/integrations" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Integrations</Link>
-              <Link href="/ai-automation" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">AI & Automation</Link>
-              <Link href="/cloud" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Cloud</Link>
-            </div>
-          </li>
-          <li><Link href="/industries" className="text-light hover:text-white transition-colors font-medium">Industries</Link></li>
-          <li><Link href="/company" className="text-light hover:text-white transition-colors font-medium">Company</Link></li>
-        </ul>
-
-        {/* Desktop CTA & Theme Toggle */}
-        <div className="hidden lg:flex items-center gap-4">
-          <ThemeToggle />
-          <Link
-            href="/login"
-            className="text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white transition-colors font-medium px-4 py-2"
-          >
-            Login
+    <>
+      <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled
+        ? 'bg-dark/95 shadow-lg backdrop-blur-xl'
+        : 'bg-dark/80 backdrop-blur-xl'
+        } border-b border-white/5`}>
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-3 flex justify-between items-center">
+          <Link href="/" className="flex items-center gap-3 hover:scale-105 transition-transform group">
+            <Image
+              src="/nizsoft-logo.png"
+              alt="Nizsoft Logo"
+              width={160}
+              height={45}
+              className="h-9 lg:h-11 w-auto opacity-90 group-hover:opacity-100 group-hover:drop-shadow-[0_0_12px_rgba(0,102,255,0.3)] transition-all"
+            />
           </Link>
+
+          {/* Desktop Navigation */}
+          <ul className="hidden lg:flex gap-10 items-center">
+            <li><Link href="/" className="text-light hover:text-white transition-colors font-medium">Home</Link></li>
+            <li className="relative group">
+              <span className="text-light hover:text-white transition-colors font-medium cursor-pointer">Platform</span>
+              <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-dark-light/98 backdrop-blur-xl border border-white/10 rounded-xl p-4 min-w-[220px] shadow-2xl z-[200]">
+                <Link href="/platform" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Overview</Link>
+                <Link href="/operations" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Operations Hub</Link>
+                <Link href="/analytics" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Analytics & AI</Link>
+                <Link href="/migration" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Migration</Link>
+                <Link href="/security" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Security</Link>
+                <Link href="/deployment" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Deployment</Link>
+              </div>
+            </li>
+            <li className="relative group">
+              <span className="text-light hover:text-white transition-colors font-medium cursor-pointer">Solutions</span>
+              <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-dark-light/98 backdrop-blur-xl border border-white/10 rounded-xl p-4 min-w-[220px] shadow-2xl z-[200]">
+                <Link href="/solutions" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">All Solutions</Link>
+                <Link href="/policy" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Policy Admin</Link>
+                <Link href="/claims" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Claims</Link>
+                <Link href="/billing" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Billing</Link>
+                <Link href="/underwriting" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Underwriting</Link>
+                <Link href="/broker-portal" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Broker Portal</Link>
+              </div>
+            </li>
+            <li className="relative group">
+              <span className="text-light hover:text-white transition-colors font-medium cursor-pointer">Technology</span>
+              <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-dark-light/98 backdrop-blur-xl border border-white/10 rounded-xl p-4 min-w-[220px] shadow-2xl z-[200]">
+                <Link href="/architecture" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Architecture</Link>
+                <Link href="/integrations" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Integrations</Link>
+                <Link href="/ai-automation" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">AI & Automation</Link>
+                <Link href="/cloud" className="block px-6 py-3 text-gray-600 dark:text-gray hover:text-primary dark:hover:text-white hover:bg-primary/10 rounded-lg transition-all">Cloud</Link>
+              </div>
+            </li>
+            <li><Link href="/industries" className="text-light hover:text-white transition-colors font-medium">Industries</Link></li>
+            <li><Link href="/company" className="text-light hover:text-white transition-colors font-medium">Company</Link></li>
+          </ul>
+
+          {/* Desktop CTA & Theme Toggle */}
+          <div className="hidden lg:flex items-center gap-4">
+            <ThemeToggle />
+            <Link
+              href="/login"
+              className="text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white transition-colors font-medium px-4 py-2"
+            >
+              Login
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onTouchEnd={(e) => {
+              e.preventDefault()
+              setMobileMenuOpen(!mobileMenuOpen)
+            }}
+            className="lg:hidden relative w-12 h-12 flex flex-col justify-center items-center gap-1.5 z-[110] touch-manipulation bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-lg border border-white/20 dark:border-white/10 hover:bg-white/20 dark:hover:bg-white/10 transition-all shadow-lg"
+            aria-label="Toggle menu"
+            type="button"
+          >
+            <motion.span
+              animate={mobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+              className="w-6 h-0.5 bg-gray-900 dark:bg-white shadow-sm transition-all pointer-events-none"
+            />
+            <motion.span
+              animate={mobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+              className="w-6 h-0.5 bg-gray-900 dark:bg-white shadow-sm transition-all pointer-events-none"
+            />
+            <motion.span
+              animate={mobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+              className="w-6 h-0.5 bg-gray-900 dark:bg-white shadow-sm transition-all pointer-events-none"
+            />
+          </button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          onTouchEnd={(e) => {
-            e.preventDefault()
-            setMobileMenuOpen(!mobileMenuOpen)
-          }}
-          className="lg:hidden relative w-12 h-12 flex flex-col justify-center items-center gap-1.5 z-[110] touch-manipulation"
-          aria-label="Toggle menu"
-          type="button"
-        >
-          <motion.span
-            animate={mobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-            className="w-6 h-0.5 bg-gray-700 dark:bg-light transition-all pointer-events-none"
-          />
-          <motion.span
-            animate={mobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-            className="w-6 h-0.5 bg-gray-700 dark:bg-light transition-all pointer-events-none"
-          />
-          <motion.span
-            animate={mobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-            className="w-6 h-0.5 bg-gray-700 dark:bg-light transition-all pointer-events-none"
-          />
-        </button>
-      </div>
+      </nav>
 
-      {/* Mobile Menu Drawer */}
+      {/* Mobile Menu Drawer - Outside nav to avoid containing block issue */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <>
@@ -134,7 +137,7 @@ export default function Navigation() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
               onClick={() => setMobileMenuOpen(false)}
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[101] lg:hidden"
             />
 
             {/* Drawer */}
@@ -143,7 +146,7 @@ export default function Navigation() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 bottom-0 w-[85%] max-w-[400px] bg-white dark:bg-dark-light backdrop-blur-xl border-l border-gray-200 dark:border-white/10 z-50 overflow-y-auto lg:hidden"
+              className="fixed top-0 right-0 bottom-0 w-[85%] max-w-[400px] bg-white dark:bg-dark-light backdrop-blur-xl border-l border-gray-200 dark:border-white/10 z-[102] overflow-y-auto lg:hidden"
             >
               <div className="p-6 pt-20">
                 {/* Mobile Navigation Links */}
@@ -304,6 +307,6 @@ export default function Navigation() {
           </>
         )}
       </AnimatePresence>
-    </nav>
+    </>
   )
 }
