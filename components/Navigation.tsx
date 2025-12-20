@@ -152,10 +152,10 @@ export default function Navigation() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 bottom-0 w-[85%] max-w-[400px] bg-gradient-to-br from-white via-white to-gray-50 dark:from-dark-light dark:via-dark-light dark:to-dark backdrop-blur-xl border-l border-gray-200 dark:border-white/10 shadow-2xl z-[102] overflow-y-auto lg:hidden"
+              className="fixed top-0 right-0 bottom-0 w-[85%] max-w-[400px] bg-gradient-to-br from-white via-white to-gray-50 dark:from-dark-light dark:via-dark-light dark:to-dark backdrop-blur-2xl shadow-[0_0_50px_rgba(0,0,0,0.3)] dark:shadow-[0_0_50px_rgba(0,102,255,0.2)] z-[102] overflow-y-auto lg:hidden"
             >
               {/* Header with Logo */}
-              <div className="sticky top-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 dark:from-primary/5 dark:via-secondary/5 dark:to-accent/5 backdrop-blur-xl border-b border-gray-200 dark:border-white/10 p-6 z-10">
+              <div className="sticky top-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 dark:from-primary/5 dark:via-secondary/5 dark:to-accent/5 backdrop-blur-xl shadow-sm p-6 z-10 animate-gradient-shift">
                 <div className="flex items-center justify-between">
                   <Image
                     src="/nizsoft-logo.png"
@@ -173,7 +173,7 @@ export default function Navigation() {
                   <Link
                     href="/"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="group flex items-center gap-3 px-4 py-3.5 text-gray-800 dark:text-light hover:text-primary dark:hover:text-white bg-gray-50 dark:bg-white/5 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20"
+                    className="group flex items-center gap-3 px-4 py-3.5 text-gray-800 dark:text-light hover:text-primary dark:hover:text-white bg-gray-50 dark:bg-white/5 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20 hover:shadow-md hover:scale-[1.02] relative overflow-hidden"
                   >
                     <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
                       <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -187,7 +187,7 @@ export default function Navigation() {
                   <div>
                     <button
                       onClick={() => toggleDropdown('platform')}
-                      className="group w-full flex items-center justify-between gap-3 px-4 py-3.5 text-gray-800 dark:text-light hover:text-primary dark:hover:text-white bg-gray-50 dark:bg-white/5 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20"
+                      className="group w-full flex items-center justify-between gap-3 px-4 py-3.5 text-gray-800 dark:text-light hover:text-primary dark:hover:text-white bg-gray-50 dark:bg-white/5 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20 hover:shadow-md hover:scale-[1.02] relative overflow-hidden"
                     >
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -229,7 +229,7 @@ export default function Navigation() {
                   <div>
                     <button
                       onClick={() => toggleDropdown('solutions')}
-                      className="group w-full flex items-center justify-between gap-3 px-4 py-3.5 text-gray-800 dark:text-light hover:text-primary dark:hover:text-white bg-gray-50 dark:bg-white/5 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20"
+                      className="group w-full flex items-center justify-between gap-3 px-4 py-3.5 text-gray-800 dark:text-light hover:text-primary dark:hover:text-white bg-gray-50 dark:bg-white/5 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20 hover:shadow-md hover:scale-[1.02] relative overflow-hidden"
                     >
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -271,7 +271,7 @@ export default function Navigation() {
                   <div>
                     <button
                       onClick={() => toggleDropdown('technology')}
-                      className="group w-full flex items-center justify-between gap-3 px-4 py-3.5 text-gray-800 dark:text-light hover:text-primary dark:hover:text-white bg-gray-50 dark:bg-white/5 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20"
+                      className="group w-full flex items-center justify-between gap-3 px-4 py-3.5 text-gray-800 dark:text-light hover:text-primary dark:hover:text-white bg-gray-50 dark:bg-white/5 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20 hover:shadow-md hover:scale-[1.02] relative overflow-hidden"
                     >
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500/20 to-teal-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -310,7 +310,7 @@ export default function Navigation() {
                   <Link
                     href="/industries"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="group flex items-center gap-3 px-4 py-3.5 text-gray-800 dark:text-light hover:text-primary dark:hover:text-white bg-gray-50 dark:bg-white/5 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20"
+                    className="group flex items-center gap-3 px-4 py-3.5 text-gray-800 dark:text-light hover:text-primary dark:hover:text-white bg-gray-50 dark:bg-white/5 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20 hover:shadow-md hover:scale-[1.02] relative overflow-hidden"
                   >
                     <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
                       <svg className="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -323,7 +323,7 @@ export default function Navigation() {
                   <Link
                     href="/company"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="group flex items-center gap-3 px-4 py-3.5 text-gray-800 dark:text-light hover:text-primary dark:hover:text-white bg-gray-50 dark:bg-white/5 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20"
+                    className="group flex items-center gap-3 px-4 py-3.5 text-gray-800 dark:text-light hover:text-primary dark:hover:text-white bg-gray-50 dark:bg-white/5 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20 hover:shadow-md hover:scale-[1.02] relative overflow-hidden"
                   >
                     <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
                       <svg className="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -338,7 +338,7 @@ export default function Navigation() {
                 <div className="my-6 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-white/20 to-transparent"></div>
 
                 {/* Mobile Theme Toggle */}
-                <div className="px-4 py-4 bg-gradient-to-r from-gray-100 to-gray-50 dark:from-white/5 dark:to-white/3 rounded-xl border border-gray-200 dark:border-white/10">
+                <div className="px-4 py-4 bg-gradient-to-r from-gray-100 to-gray-50 dark:from-white/5 dark:to-white/3 rounded-xl shadow-sm">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center">
@@ -357,7 +357,7 @@ export default function Navigation() {
                   <Link
                     href="/login"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="group flex items-center justify-center gap-2 bg-white dark:bg-white/10 border-2 border-gray-300 dark:border-white/20 text-gray-800 dark:text-white px-6 py-3.5 rounded-xl font-semibold hover:border-primary hover:bg-primary/5 transition-all shadow-sm"
+                    className="group flex items-center justify-center gap-2 bg-white dark:bg-white/10 text-gray-800 dark:text-white px-6 py-3.5 rounded-xl font-semibold hover:bg-primary/5 transition-all shadow-md hover:shadow-lg"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
@@ -367,10 +367,10 @@ export default function Navigation() {
                   <Link
                     href="/contact"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="group flex items-center justify-center gap-2 bg-gradient-to-r from-primary via-secondary to-accent text-white px-6 py-3.5 rounded-xl font-semibold hover:shadow-xl hover:shadow-primary/40 transition-all relative overflow-hidden"
+                    className="group flex items-center justify-center gap-2 bg-gradient-to-r from-primary via-secondary to-accent text-white px-6 py-3.5 rounded-xl font-semibold hover:shadow-xl hover:shadow-primary/40 transition-all relative overflow-hidden animate-glow-pulse"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
-                    <svg className="w-5 h-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 relative z-10 animate-bounce-subtle" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                     <span className="relative z-10">Book Demo</span>
