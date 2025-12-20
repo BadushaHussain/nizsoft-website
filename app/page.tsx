@@ -46,13 +46,13 @@ export default function Home() {
               { name: 'GIG', logo: '/partners/gig.png' },
               { name: 'MetLife', logo: '/partners/metlife.png' },
             ].map((partner, i) => (
-              <div key={`first-${i}`} className="flex-shrink-0 mx-8 lg:mx-12 hover:grayscale transition-all duration-300 hover:scale-110">
+              <div key={`first-${i}`} className="flex-shrink-0 mx-4 lg:mx-12 hover:grayscale transition-all duration-300 hover:scale-110">
                 <Image
                   src={partner.logo}
                   alt={`${partner.name} Logo`}
                   width={160}
                   height={60}
-                  className="h-12 lg:h-14 w-auto object-contain"
+                  className="h-8 lg:h-14 w-auto object-contain"
                   priority={false}
                   loading="lazy"
                 />
@@ -66,13 +66,13 @@ export default function Home() {
               { name: 'GIG', logo: '/partners/gig.png' },
               { name: 'MetLife', logo: '/partners/metlife.png' },
             ].map((partner, i) => (
-              <div key={`second-${i}`} className="flex-shrink-0 mx-8 lg:mx-12 hover:grayscale transition-all duration-300 hover:scale-110">
+              <div key={`second-${i}`} className="flex-shrink-0 mx-4 lg:mx-12 hover:grayscale transition-all duration-300 hover:scale-110">
                 <Image
                   src={partner.logo}
                   alt={`${partner.name} Logo`}
                   width={160}
                   height={60}
-                  className="h-12 lg:h-14 w-auto object-contain"
+                  className="h-8 lg:h-14 w-auto object-contain"
                   priority={false}
                   loading="lazy"
                 />
